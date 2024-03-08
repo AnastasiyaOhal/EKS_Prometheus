@@ -53,4 +53,5 @@ jobs:
         run: |
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm upgrade my-prometheus prometheus-community/prometheus -f values.yaml -f values-dev.yaml -n prometheus
+          kubectl apply -f ingress.yaml
 #          helm install my-prometheus prometheus-community/prometheus --version 25.16.0 -n prometheus    
