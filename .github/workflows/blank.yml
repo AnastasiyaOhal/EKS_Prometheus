@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  prometheus:
     runs-on: ubuntu-latest
 
     steps:
