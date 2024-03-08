@@ -26,9 +26,9 @@ jobs:
         run: | 
           curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.29.0/2024-01-04/bin/darwin/amd64/kubectl
 
-      - name: Create ns  
-        run: | 
-          kubectl create ns prometheus
+     # - name: Create ns  
+     #   run: | 
+     #     kubectl create ns prometheus
 
       - name: Install Helm
         run: |
@@ -41,7 +41,7 @@ jobs:
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm install my-prometheus prometheus-community/prometheus --version 25.16.0 -n prometheus
     
-     - name: Clone Prometheus
+      - name: Clone Prometheus
         uses: GuillaumeFalourd/clone-github-repo-action@v2.3
         with:
           depth: 1
