@@ -1,4 +1,4 @@
-service:
+  service:
     ## If false, no Service will be created for the Prometheus server
     ##
     enabled: true
